@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>the content</title> 
+       
+
+    </head>
+
+    </head>
+    <style>
+        html{
+            font-size:16px;/* so it assigns 16px to 1rem*/
+        }
+        body{
+            background-image:url("https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg")/*background image*/
+        }
+        .header{
+            background-image:url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg");
+            font-size:2rem;
+            cursor:pointer;
+            font-family:'Courier New', Courier, monospace;
+            color:blue;
+            max-width:40rem;
+            width:90%;
+            /*position:fixed;*//* fixed position so not anchored or dependent on other elements*/
+            /*left:50%;
+            top:5rem;/* near the top*/
+            /*transform:TranslateX(-50%);*/
+            border: 0.25rem solid darkmagenta;
+            padding:1.25rem 1.25rem;/* padding for more empty space*/
+            box-shadow:0rem 0rem 0.5rem 0.25rem purple;/* much greater contrast so it is more concentrated upon as its header after all*/
+            text-align:center;
+            
+
+        }
+        .para-review{
+            background-image:url("https://images.pexels.com/photos/6276019/pexels-photo-6276019.jpeg");
+            font-size:1.25rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.4rem 0.4rem;
+            text-wrap:wrap;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 10rem;
+            /*margin-right:8.5rem;*/
+            width:100%;
+
+
+        }
+        .para-categories{
+            background-image:url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg");
+            font-size:1.25rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.4rem 0.4rem;/* space from border i want more empty space as its chill*/
+            text-wrap:wrap;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 10rem;
+            width:100%;
+
+            
+        }
+        .para-scent{
+            
+            font-size:1.25rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.4rem 0.4rem;/* space from border i want more empty space as its chill*/
+            text-wrap:wrap;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 10rem;
+            width:100%;
+
+        }
+        .para-mood{
+           
+            font-size:1.25rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.4rem 0.4rem;/* space from border i want more empty space as its chill*/
+          
+            font-family:'Courier New', Courier, monospace;
+            max-width: 10rem;
+            width:100%;
+        }
+        .layout{ /* 1st container*/
+            display:flex;
+            flex-direction:column; /*flexbox layout so this blog can support and fit for other devices and also just a better cleaner layout*/
+            justify-content:center;
+            align-items:center; /* centers elements*/
+            gap:2rem;
+        }   
+        .opening-para{
+            background-image:url("https://images.pexels.com/photos/1428169/pexels-photo-1428169.jpeg");
+            border-radius:0.25rem;
+            border:0.25rem solid lightcoral;
+            color:lightcoral;
+            padding:0.25rem 0.25rem;/* space from border i want more empty space as its chill*/
+            background-color:cornsilk;
+            
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;
+
+        }
+        /*.mid-layout {/* second container so varieities of flexbox layouts*/
+             /*(display:flex;
+             flex-direction:row;/* rows of boxes*/
+             /*align-items:center;
+             justify-content:space-evenly;/* evenly spaced*/
+             /*flex-wrap:wrap;/* decides what happens when not enough space for mobile*/
+             /*gap:6rem;)*/
+      
+        
+        .perfume1btn{
+            font-size:1rem;
+            
+            
+            background-color:fuchsia;
+            max-width:8rem;
+            width:100%;
+            text-align:center;
+            padding:0.25rem 0.25rem;/* space from border i want more empty space as its chill*/
+            box-shadow:0rem 0rem 0.2rem 0.2rem lightpink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            border:0.2rem solid palevioletred;
+            border-radius:0.25rem;
+            color:deeppink;
+            cursor:pointer;/* so you know its interactable*/
+            
+            
+        }
+        .image{
+            display:none;/* so it does not show normally only upon hover*/
+            border-radius:0.5rem;
+            width:100%;
+            max-width:9rem;/* mobile friendly so width can adapt to different devices*/
+            
+            
+            position:absolute;/* it is anchored to the button*/
+            left:50%;/* uses percent so it is more friednly for mobile devices as it can adpat to screen size then*/
+            top:50%;
+            transform:TranslateX(-50%);
+            
+        }
+        .dropdownimg:hover .image{/* hovering over the button will show the image*/
+            display:block;/* represents it below as a block*/
+        }
+        .dropdownimg{
+            position:relative;
+            display:inline-block;/* it will appear below*/
+            
+        }
+        .perf_image{
+            max-width:10rem;
+            width:100%;
+            border-radius:0.5rem;
+
+            display:none;
+            position:absolute;
+            left:50%;
+            top:110%;
+            transform:TranslateX(-50%);
+          
+        }
+        .dropwdownimg2:hover .perf_image{
+            display:block;
+        }
+        .dropwdownimg2{
+            position:relative;
+            display:inline-block;
+        }
+        .caption1{
+            background-image:url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg");
+            font-size:1rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.4rem 0.4rem;
+            text-wrap:wrap;
+            text-align: center;
+            font-family:'Courier New', Courier, monospace;
+            min-width:25rem;
+            
+            /*margin-right:8.5rem;*/
+            
+
+        }
+        .caption2{
+            background-image:url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg");
+            font-size:1.2rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.4rem 0.4rem;
+            text-wrap:wrap;
+            text-align:center;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 25rem;
+            /*margin-right:8.5rem;*/
+            width:100%;
+        }
+
+        .layout{ /* 1st container*/
+           display:flex; 
+           flex-direction:column; /*flexbox layout so this blog can support and fit for other devices and also just a better cleaner layout*/ 
+           justify-content:center;
+           align-items:center; /* centers elements*/
+           gap:2rem;
+         }
+        
+        .row2{
+            display:flex;/* flex box layout*/
+            justify-content:space-between;
+            flex-wrap:wrap;
+            gap:10rem;/* gap between divs*/
+            flex-direction:row;/* positions them in rows*/
+            
+        }
+        .row2 > *{
+            flex:1;/*it allows an item to take up the available space and shrink when needed it to making it much more flexible*/
+            min-width:0; /*allows the divs to shrink even if the text does not fit making it very flexible */
+        }        
+        .mid-layout{
+            display:flex;/* flexbox layout*/
+            justify-content:space-between;
+            flex-wrap:wrap;/* allows item to go to other lines to prevent over cramming which looks not aesthetic*/
+            gap:5rem;
+            flex-direction:row;
+        }
+        .main-layout{ /* container determining the main flexbox layout of the other containers which are in rows */
+          display:flex;
+          flex-direction:column;
+          gap:20rem;
+        }
+        .perfumebtn2{
+            border: fuchsia solid 0.3rem;
+            border-radius:0.2rem;
+            text-align:center;
+            max-height:2.5rem;
+            height:90%;
+            max-width:8rem;
+            width:100%;
+            cursor:pointer;/* when hovering over cursor becomes pointer*/
+            background-image:url("https://images.pexels.com/photos/10874546/pexels-photo-10874546.jpeg");
+            font-family:'Courier New', Courier, monospace,sans-serif;
+            color:rgb(204, 33, 204);
+            box-shadow:0rem 0rem 0.3rem 0.1rem magenta;
+        }
+        .takeabreak{
+            text-align:center;/* centers text*/
+            font-size:1.5rem;
+            font-family:'Courier New', Courier, monospace;
+            color:deeppink;
+            border:lightcoral solid 0.3rem;
+            max-height:8rem;/* sets limits so it can adjust to mobile height and so is not set at a certain value*/
+            height:90%;
+            max-width:20rem;/* sets limits so it can adjust to mobile height and so is not set at a certain value*/
+            width:100%;
+            box-shadow:0rem 0rem 0.2rem 0.1rem coral;/* provides a shadow to  make it look cooler*/
+            border-radius:0.25rem;
+            background-image:url("https://images.pexels.com/photos/6276019/pexels-photo-6276019.jpeg");
+            
+        }
+        .breakbutton{
+            text-align:center;
+            border:aqua solid 0.3rem;
+            font-size:1.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            color:darkmagenta;
+            
+            box-shadow:0rem 0rem 0.2rem 0.1rem lightblue;
+            border-radius:0.25rem;/* makes the borders appear circular*/
+            cursor:pointer;
+        }
+        .thirdrow{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-evenly;
+            gap:3rem;
+            flex-direction:row;
+            
+        }
+        /*.thirdrow > *{
+            flex:1;
+            min-width:0;
+        }*/
+        .scent{
+   
+            font-size:1rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.2rem 0.2rem;/* space from border i want more empty space as its chill*/
+            text-wrap:wrap;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 13rem;
+            
+           
+           
+        }
+        .review{
+
+            font-size:1rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.2rem 0.2rem;
+            text-wrap:wrap;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 13rem;
+            /*margin-right:8.5rem;*/
+          
+            
+          
+        }
+        .text-wrap {
+          white-space: normal;
+        }
+        .mood{
+ 
+            font-size:1rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.2rem 0.2rem;/* space from border i want more empty space as its chill*/
+            text-wrap:wrap;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 13rem;
+          
+          
+        }
+        .conclusion{
+
+            font-size:1rem;
+            border:0.18rem solid lightcoral;
+            box-shadow:0rem 0rem 0.2rem 0.2rem pink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            padding:0.2rem 0.2rem;/* space from border i want more empty space as its chill*/
+            text-wrap:wrap;
+            font-family:'Courier New', Courier, monospace;
+            max-width: 13rem;
+            
+          
+
+        }
+        .perf_image3{
+            display:none;
+            border-radius: 0.5rem;
+            width:100%;
+            max-width:9rem;
+            position:absolute;
+
+
+        }
+        .thirddropdown:hover .perf_image3{
+            display:block;
+        }
+        .thirddropdown{
+            display:inline-block;
+            position:relative;
+        }
+
+        .perfumebtn3{
+             font-size:1rem;
+            
+            
+            background-color:fuchsia;
+            max-width:8rem;
+            width:100%;
+            text-align:center;
+            padding:0.25rem 0.25rem;/* space from border i want more empty space as its chill*/
+            box-shadow:0rem 0rem 0.2rem 0.2rem lightpink;/* a blurry extending shadow with a similar colour so there is little contrast as it is supposed to be a chill blog*/
+            border:0.2rem solid palevioletred;
+            border-radius:0.25rem;
+            color:deeppink;
+            cursor:pointer;
+        }
+        .fourthrow{
+            display:flex;
+            justify-content:space-evenly;
+            flex-wrap:wrap;
+            gap:10rem;
+            flex-direction:row;
+        }
+        .fourthrow > *{
+            flex:1;
+            min-width:0;
+        }
+        .reminder{
+          text-align:center;
+          border:0.4rem solid hotpink;
+          padding:0.5rem;
+          max-width:30rem;
+          width:100%;
+          background-image:url("https://images.pexels.com/photos/6276019/pexels-photo-6276019.jpeg");
+          border-radius:0.25rem;
+          cursor:pointer;
+          font-size:1.5rem;
+          color:blueviolet;
+          border-radius:0.5rem;
+          box-shadow:0rem 0rem 0.2rem 0.2rem pink;
+          font-family:'Times New Roman', Times, serif,sans-serif;
+
+        }
+        .extra{
+          text-align:center;
+          font-size:2rem;
+          color:blueviolet;
+          border-radius:0.25rem;
+          max-width:30rem;
+          width:100%;
+          cursor:pointer;
+          padding:0.3rem;
+          border-radius:0.5rem;
+          border: 0.4rem solid hotpink;
+          background-image:url("https://images.pexels.com/photos/6276019/pexels-photo-6276019.jpeg");
+          box-shadow: 0rem 0rem 0.2rem 0.2rem pink;
+
+
+        }
+        .return{
+          text-align:center;
+          cursor:pointer;
+          font-size:1.5rem;
+          font-family:'Courier New', Courier, monospace,sans-serif;
+          box-shadow: 0rem 0rem 0.3rem 0.1rem magenta;
+          border:0.4rem solid fuchsia;
+          background-image:url("https://images.pexels.com/photos/2471234/pexels-photo-2471234.jpeg");
+          color:purple;
+          border-radius:0.25rem;
+        }
+        .para-mood,
+        .para-review,
+        .para-scent,
+        .review,
+        .scent,
+        .conclusion,
+        .mood,
+        .caption1,
+        .caption2,
+        
+        .para-categories{
+            background-image:url("https://images.pexels.com/photos/6276019/pexels-photo-6276019.jpeg");
+        }
+        .mood,
+        .review,
+        .scent,
+        .opening-para,
+        .caption1,
+        .caption2,
+        .conclusion,
+        .para-review,
+        .para-mood,
+        .para-scent,
+        .para-categories{
+            color:fuchsia;
+        }
+    </style>
+ <body>
+  <div class = "main-layout">
+   <div class = "layout">
+     <div class = "header" id = "interactable-head">The HONEST PERFUME REVIEW</div> 
+     <div class = "opening-para">hello everybody to a cosy blog on different perfumes and a general evaluation </div>
+   <div class = "mid-layout"> 
+       <div class ="para-categories">Miss Dior 1947 was a romatic,floral scent</div>
+       <div class = "para-review">It evokes a sense of luxury,romance and femininity.</div>
+       <div class = "dropdownimg"> 
+        <div class = "perfume1btn"> Perfume DIOR </div> 
+            <img 
+              src = "https://images.pexels.com/photos/3067686/pexels-photo-3067686.jpeg"
+              alt = "Dior perfume" 
+              class = "image">
+       </div>        
+       <div class = "para-mood">
+        The packaging has a soft aesthetic "smelling romantic,sweet and lovely".</div>
+       <div class = "para-scent">The scent was complex,strong and not like sweet ones today;it was rich and amazing!</div>
+   <div class = "row2"> 
+    
+    <div class = "caption1">Valentino-Roma-Donna has vanilla,jasmine and cashmeran;for a sweet blend</div>
+    <div class = "caption2">The bottle has a warm,sweet scent with a mood of soft,elegance </div>
+    
+    <div class = "dropwdownimg2">
+      <button class = "perfumebtn2"> VALENTINO</button>
+      <img 
+      src = "https://images.pexels.com/photos/15332497/pexels-photo-15332497.jpeg "
+      alt = "valentino perfume" 
+      class = "perf_image"
+      width = "200" 
+      height = "200"
+      >
+    </div>
+    <div class = "takeabreak" id = "breakfromreading">Take a Break</div>
+    <button class = "breakbutton" id ="changingcoloursbutton">CLICK ME</button>
+
+    
+   </div> 
+      
+   </div> 
+ 
+   </div> 
+   <div class = "thirdrow">
+
+
+    <div class = "scent">Chanel is known for elegant,simple bottle designs especially the rectangular bottle of Chanel No 5</div>
+    <div class = "review">Chanel No 5 has a rich floral scent with notes including jasmine,sandalwood and a concentration of aldehydes gives it a unique,floral scent. </div>
+    <div class = "thirddropdown">
+     <div class = "perfumebtn3">Perfume CHANEL
+     <img 
+        src = "https://images.pexels.com/photos/22589332/pexels-photo-22589332.jpeg"
+         alt = "perfume name 3"
+         class = "perf_image3"
+         width = "200"
+         height = "200"
+         >
+      </div>   
+    </div>
+    <div class = "mood">However it's expensive while also being present in small bottles 100-200ml.The scent can also be too strong and intense for some people
+    </div> 
+    <div class = "conclusion">Chanel No 5 is an iconic,long lasting perfume with strong,floral scents which evokes a strong,elegant mood perfect for a confident,smart approach</div>
+
+    
+    
+
+
+
+
+   </div>    
+    <div class = "fourthrow">
+        <button class = "reminder" id = "privacy">
+        PRIVACY POLICY
+        </button>
+        
+        <button class = "return" id = "return_button">BACK TO HOME PAGE</button>
+        <button class = "extra" id = "contact">Contact Page</button>
+    </div>
+
+    
+  </div>     
+         <script> 
+         const privacypolicy = document.getElementById("privacy")
+         privacypolicy.addEventListener("click",function(){
+           window.location.href = "file:///C:/Users/User%201/OneDrive/personal%20coding%20projects(All%20types%20of%20languages)/completed%20blog%20project/privacy.html"
+         })
+         const contact = document.getElementById("contact")
+         contact.addEventListener("click",function(){
+            window.location.href = "file:///C:/Users/User%201/OneDrive/personal%20coding%20projects(All%20types%20of%20languages)/completed%20blog%20project/contact%20Page%20real.html"
+         })
+         let userprompt = prompt("hello what should we refer you to as for our blog?")/* make the blog feel comfy and personal*/
+          const head = document.getElementById("interactable-head")
+           head.addEventListener("mouseenter",function(){/* when you hiver iver the header it says hope you enjoy the blog inserted name a nice touch to the blog*/
+            head.innerHTML = "Hope you enjoy the blog " + userprompt/* i should add validation tbh for bad names i might need to connect to some sort of API that is probs out of my skillset though*/ });
+           head.addEventListener("mouseout",function(){/* when you let the mouse out it returns to normal*/
+            head.innerHTML = "THE HONEST PERFUME REVIEW" });/* i dont like writing java scriopt code btw very complicated*/ 
+          const breakfromreading = document.getElementById("breakfromreading")
+            breakfromreading.addEventListener("mouseenter",function(){/* when the mouse enters the div*/
+                breakfromreading.innerHTML = "Have a sip of warm tea,relax."})/* the inner html of the div changes to this text*/
+            breakfromreading.addEventListener("mouseout",function(){
+                breakfromreading.innerHTML = "Take a Break"
+            })   
+          const changingcoloursbutton = document.getElementById("changingcoloursbutton")  
+           let colourchoices = ["aqua","magenta","purple","green","blueviolet","darkpurple","beige","lightpink","blue","darkred"]/*different choices of  random color*/
+           index = 0/* sets int to 0*/
+           let counter = 0/* sets counter to 0*/
+           changingcoloursbutton.addEventListener("click",function(){/*if you click the button*/
+            counter = counter + 1
+            changingcoloursbutton.innerHTML = "Clicks:"+counter
+            changingcoloursbutton.style.backgroundColor = colourchoices[index]/* the background of the button using the value of the integer index gets that elements position in the array*/
+            index = (index+1)%colourchoices.length/*then the index value increases and we get the remainder of it from the array's length resulting in different elements retrieved from the array wihtout having to utilise for loops which takes up more memory and is less efficient*/
+           })
+           changingcoloursbutton.addEventListener("mouseout",function(){
+            changingcoloursbutton.innerHTML = "CLICK ME"
+           })
+           const returnbutton = document.getElementById("return_button")
+           returnbutton.addEventListener("click",function(){
+            window.location.href = "final blog.html"
+           })
+            </script> 
+            </body> 
+            </html>

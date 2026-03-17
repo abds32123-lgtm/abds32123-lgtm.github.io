@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>An Honest, Brutal Perfume Review</title>
+  <style>
+    html {
+  font-size: 16px;/* sets 1 rem to 16px*/
+}
+
+body {
+  background-position: center;
+  background-image: url("https://images.pexels.com/photos/3109850/pexels-photo-3109850.jpeg");
+  backdrop-filter: blur(0.25rem);/* adds blur to backdroo*/
+  height: 100vh; /* gives it the max viewport height for a device this would not be safe for the mainpage but for a  title page it should be good*/
+  margin: 0;
+}
+
+
+.center {
+  position: fixed;/* so its not anchored to anything with position absolute make it much more reliable positioning for even mobile devices*/
+  top: 15%;
+  left: 50%;/* relative to screen size with percentage instead of doing px or rem movement*/
+  transform: translateX(-50%);
+  color: blueviolet;
+  font-size: 2.75rem;
+  padding: 3.125rem;/* distance text is from border gives a more cosyt feel due to more empty space*/
+  text-align: center;
+  width: 37.5rem;
+  border: 1.25rem solid blueviolet;
+  background-image: url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg");
+  font-family: 'Pacifico', cursive;
+  border-radius: 0.75rem;/* makes the border circular*/
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0.125rem blueviolet;/* gives a quite prominent box shadow especially cause its the center title*/
+}
+
+.div2 {
+  position: fixed;/* so its not anchored to anything with position absolute make it much more reliable positioning for even mobile devices*/
+  top: 6%;
+  left: 50%;/* relative to screen size with percentage instead of doing px or rem movement*/
+  transform: translateX(-50%);
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 0.625rem;
+  border: 0.3125rem solid darkorchid;
+  font-family: "Comfortaa", sans-serif;
+  background-color: blue;
+  color: blanchedalmond;
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0.125rem darkorchid;
+  padding: 0.5rem;/* distance text is from border gives a more cosyt feel due to more empty space*/
+  max-width: 30rem;
+}
+
+
+button {
+  position: fixed;/* so its not anchored to anything with position absolute make it much more reliable positioning for even mobile devices*/
+  bottom: 10%;
+  left: 49.5%;/* relative to screen size with percentage instead of doing px or rem movement*/
+  transform: translateX(-50%);
+  font-size: 2.8125rem;
+  color: lightcoral;
+  cursor: pointer;/* makes it quite clear its  interactable*/
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.625rem;/* distance text is from border gives a more cosyt feel due to more empty space*/
+  border-radius: 0.625rem;
+  border-color: deeppink;
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0.125rem magenta;/* prominent box shadow as its the main button*/
+}
+
+
+.button2 {
+  position: fixed;/* so its not anchored to anything with position absolute make it much more reliable positioning for even mobile devices*/
+  bottom: 33%;
+  left: 32%;/* relative to screen size with percentage instead of doing px or rem movement*/
+  transform:TranslateX(-50%);
+  font-size: 0.9375rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: cyan;
+  border-radius: 0.4375rem;
+  border: 0.3125rem solid blueviolet;
+  padding: 0.3125rem;/* distance text is from border gives a more cosyt feel due to more empty space*/
+  cursor: pointer;
+  background-image: url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg");
+  box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem purple;
+}
+
+
+.button3 {
+  position: fixed;/* so its not anchored to anything with position absolute make it much more reliable positioning for even mobile devices*/
+  bottom: 32.7%;
+  left:64%; /* relative to screen size with percentage instead of doing px or rem movement*/
+  transform:TranslateX(-50%);
+  font-size: 0.9375rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: magenta;
+  cursor:default;
+  padding: 0.1875rem;/* distance text is from border gives a more cosyt feel due to more empty space*/
+  border: 0.25rem solid magenta;
+  border-radius: 0.4375rem;
+  background-image: url("https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg");
+  box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem magenta;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="center">AN HONEST PERFUME REVIEW</div>
+    <div class="div2">Welcome to this perfume review, a place to calm down, chill and enjoy a relaxing perfume review.</div>
+    <button id ="main-button" type = "button">Begin Reading</button>
+    <button class="button2" id ="inst-button" type = "button">What this blog is about</button>
+    <button class="button3">Grab a snack or get comfy and enjoy</button>
+  </div>
+<script>
+ const mainbtn = document.getElementById("main-button");
+ mainbtn.addEventListener("click",function(e){  
+    window.location.href = "this is for the main page accesses by th.html"
+ });
+ const inst_button = document.getElementById("inst-button")
+ inst_button.addEventListener("click",function(e){
+   window.location.href = ("this is for the instructions page.html")
+ })
+</script>  
+</body>
+</html>
